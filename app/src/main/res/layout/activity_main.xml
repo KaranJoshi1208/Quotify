@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="72dp"
+        android:src="@drawable/ic_app"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/shareBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/ic_share"
+        android:backgroundTint="#D9B5B5"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/cardView" />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="36dp"
+        android:layout_marginTop="204dp"
+        app:cardCornerRadius="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/png"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_quote" />
+
+            <ImageButton
+                android:id="@+id/heart"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/heart_hollow" />
+
+            <TextView
+                android:id="@+id/quoteTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/png"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif-light"
+                android:padding="4dp"
+                android:text="Ye Gareeb iski MKC , kyu baitha hai yha ..."
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/authorTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/quoteTxt"
+                android:layout_marginVertical="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Sunny Deol"
+                android:textAlignment="textEnd"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/previousBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="72dp"
+        android:layout_marginStart="36dp"
+        android:background="@drawable/left_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/nextBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/right_arrow"
+        android:layout_marginBottom="72dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/wishList"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_wishlist"
+        android:backgroundTint="@color/white"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nextBtn"
+        app:layout_constraintStart_toEndOf="@+id/previousBtn" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
