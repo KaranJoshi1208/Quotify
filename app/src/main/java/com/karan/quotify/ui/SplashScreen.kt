@@ -41,11 +41,11 @@ class SplashScreen : AppCompatActivity() {
 
         val sp = applicationContext.getSharedPreferences("room_pref", MODE_PRIVATE)
         val isRoomPopulated = sp.getBoolean("isRoomPopulated", false)
-        Log.d("room_values", "$isRoomPopulated")
+//        Log.d("room_values", "$isRoomPopulated")
 
         if(!isRoomPopulated) {
             populateRoom()
-            Log.d("room_values", "Data Filled in Room.....or does it?")
+//            Log.d("room_values", "Data Filled in Room.....or does it?")
         }
 
         Handler(Looper.getMainLooper()).postDelayed(

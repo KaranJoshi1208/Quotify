@@ -1,10 +1,8 @@
 package com.karan.quotify.repository
 
 import android.content.Context
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity.MODE_PRIVATE
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.liveData
 import com.karan.quotify.model.Quote
 import com.karan.quotify.model.QuoteDB
 import kotlinx.coroutines.Dispatchers
@@ -25,7 +23,7 @@ class Repository(private val context: Context) {
 
         val id = sharedPref.getInt("current_id", 1)
         currentID = id
-        Log.d("room_values", "Current quote ID = $id")
+//        Log.d("room_values", "Current quote ID = $id")
     }
 
     suspend fun getQuote(): Quote = withContext(Dispatchers.IO) {
@@ -37,7 +35,7 @@ class Repository(private val context: Context) {
         if(totalQuote <= -1) {
             val sp = context.getSharedPreferences("room_pref", MODE_PRIVATE)
             totalQuote = sp.getInt("quote_size", -1)
-            Log.d("room_values", "Total quotes = $totalQuote")
+//            Log.d("room_values", "Total quotes = $totalQuote")
         }
         if(currentID < totalQuote) {
             currentID++
@@ -56,16 +54,11 @@ class Repository(private val context: Context) {
         dao.updateFav(id, isFav)
     }
 
-
-//    fun getFav() : LiveData<List<Quote>> {
-//        return dao.getFav()
-//    }
-
     fun setLastQuoteId() {
         val sharedPref = context.getSharedPreferences("room_pref", MODE_PRIVATE)
         val editor = sharedPref.edit()
         editor.putInt("current_id", currentID)
         editor.apply()
-        Log.d("room_values", "Last visited quote ID is $currentID")
+//        Log.d("room_values", "Last visited quote ID is $currentID")
     }
 }

@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        // I can't(don't want to) implement the whole file sharing functionality here also (cuz I an Lazy)
+        // I can't(don't want to) implement the whole file sharing functionality here also (cuz I am Lazy)
         binder.shareBtn.visibility = View.INVISIBLE
 
         mainViewModel = ViewModelProvider(
