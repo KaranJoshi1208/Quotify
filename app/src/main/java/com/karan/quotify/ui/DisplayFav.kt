@@ -79,6 +79,9 @@ class DisplayFav : AppCompatActivity() {
         }
 
         binder.shareBtn.setOnClickListener {
+
+            binder.shareBtn.visibility = View.INVISIBLE
+
             // Capture the quote view
             val quoteView = binder.main  // Replace with the actual view ID that contains the quote
             val bitmap = captureScreen(quoteView)

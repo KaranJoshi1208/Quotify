@@ -16,8 +16,8 @@
 
         <ImageView
             android:id="@+id/icon"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
             android:background="@drawable/opening_quote"
             android:layout_marginTop="8dp"
             android:layout_marginHorizontal="12dp"/>
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:text="Ye Gareeb iski MKC , kyu baitha hai yha ..."
             android:fontFamily="serif"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:layout_toEndOf="@+id/icon"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="12dp"/>
@@ -38,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sunny Paji"
-            android:textSize="12sp"
+            android:textSize="8sp"
             android:layout_below="@+id/words"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="16dp"
